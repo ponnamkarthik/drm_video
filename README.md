@@ -119,8 +119,8 @@ class _MyAppState extends State<MyApp> {
 
 ## Working On
 
-> DRM Support for iOS
-> RTMP Support for Android
+- DRM Support for iOS
+- RTMP Support for Android
 
 > For more code please check example project
 
