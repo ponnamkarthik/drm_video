@@ -32,34 +32,29 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: [
-              Container(
-                // color: Colors.red,
-                padding: const EdgeInsets.all(20),
-                child: AspectRatio(
-                  aspectRatio: _videoController?.value?.aspectRatio ?? 16 / 9,
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: <Widget>[
-                      Container(
-                        color: Colors.yellow,
-                        child: DrmVideoPlayer(
-                          videoUrl: dashUrl,
-                          autoPlay: false,
-                          drmLicenseUrl: licenseUrl,
-                          onVideoControls: (VideoController controller) {
-                            print("onVideoControls $controller");
-                            _videoController = controller;
-                            _videoController.addListener(() {
-                              setState(() {});
-                            });
+              AspectRatio(
+                aspectRatio: _videoController?.value?.aspectRatio ?? 16 / 9,
+                child: Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: <Widget>[
+                    Container(
+                      child: DrmVideoPlayer(
+                        videoUrl: dashUrl,
+                        autoPlay: false,
+                        drmLicenseUrl: licenseUrl,
+                        onVideoControls: (VideoController controller) {
+                          print("onVideoControls $controller");
+                          _videoController = controller;
+                          _videoController.addListener(() {
                             setState(() {});
-                          },
-                        ),
+                          });
+                          setState(() {});
+                        },
                       ),
-                      if (_videoController != null)
-                        _ControlsOverlay(controller: _videoController),
-                    ],
-                  ),
+                    ),
+                    if (_videoController != null)
+                      _ControlsOverlay(controller: _videoController),
+                  ],
                 ),
               ),
               if (_videoController != null)
