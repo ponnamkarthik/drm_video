@@ -1,0 +1,22 @@
+PODS:
+  - drm_video (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - drm_video (from `.symlinks/plugins/drm_video/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  drm_video:
+    :path: ".symlinks/plugins/drm_video/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  drm_video: 4881bd7463dbc2bb749a66ff50e6c2d3e6e853f0
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.0
